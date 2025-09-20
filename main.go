@@ -1,4 +1,4 @@
-package httpservergo
+package main
 
 import(
 	"net/http"
