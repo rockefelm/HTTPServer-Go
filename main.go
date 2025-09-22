@@ -5,9 +5,11 @@ import(
 	"log"
 )
 
-func main(){
-	mu := http.NewServeMux()
 
+func main(){
+
+	mu := http.NewServeMux()
+	mu.Handle("/", http.FileServer(http.Dir(".")))
 	server := &http.Server {
 		Addr:		":8080",
 		Handler:	mu,
